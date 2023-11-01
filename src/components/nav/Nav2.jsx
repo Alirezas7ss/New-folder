@@ -18,7 +18,7 @@ import {
 } from "framer-motion";
 let scrollThreshold = [0, 50];
 
-const items = [
+const items =  [
   {
     id: 1,
     zIndex: 0,
