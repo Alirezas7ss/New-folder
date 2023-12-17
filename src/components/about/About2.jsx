@@ -65,7 +65,7 @@ const About = ({aboutRef}) => {
             >
               <FaAward className="about__icon" />
               <h5>سابقه</h5>
-              <small>یک سال </small>
+              <small>سه سال </small>
             </artifact>
 
             <artifact

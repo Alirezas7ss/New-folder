@@ -52,7 +52,7 @@ const About = ({aboutRef}) => {
               <artifact data-aos="zoom-in"  data-aos-easing="ease-out-cubic" data-aos-duration="1000" className="about__card1">
                 <FaAward className='about__icon1'/>
                 <h5>Experience</h5>
-                <small>1+ Years Working</small>
+                <small>3+ Years Working</small>
               </artifact>
             
             
