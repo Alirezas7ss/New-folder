@@ -57,12 +57,12 @@
   
 }
 
-.about__card:hover {
+/* .about__card:hover {
   background: #2c2c6c3f;
   backdrop-filter: blur(3px);
   border-color: var(--color-bg-variant);
   cursor:default;
-}
+} */
 
 .about__icon {
   color: var(--color-primary);

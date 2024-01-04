@@ -213,7 +213,7 @@ const Portfolio = ({portfolioRef}) => {
                 custom={i}
                 key={id}
   
-                style={{ backgroundImage: `linear-gradient(rgba(229,229,229,0.5) 0%, rgba(150,150,150 , 0.7) 100%) , url(${image})`}}
+                style={{ backgroundImage: `linear-gradient(rgba(229,229,229,0.7) 0%, rgba(150,150,150 , 0.93) 100%) , url(${image})`}}
                 className="portfolio__item"
               >
                 <div className='portfolio__cover'>

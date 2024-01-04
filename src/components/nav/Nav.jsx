@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 //framer-motion
 import {
   motion,
-  useMotionTemplate,
   useMotionValue,
   useTransform,
   useViewportScroll,
@@ -63,22 +62,7 @@ const parent = {
     // scale: [1,0,2]
   },
 };
-// const svgicon = {
-//   hidden: { opacity: 1 },
-//   visible: {
-//     // opacity: [0,1],
-//     transition: { duration: 1, ease: "anticipate" },
-//     // pathLength: 1,
-//     // background: 'red'
-//     opacity: 0,
-//     // scale: [1,0,2]
-//   },
-// };
 const Nav = ({ active }) => {
-  // const [focused, setFocused] = useState("#");
-  // useEffect(() => {
-  //   setActiveNav('#')
-  // }, [])
   let { scrollY } = useViewportScroll();
   let scrollYOnDirectionChange = useRef(scrollY.get());
   let lastPixelsScrolled = useRef();
@@ -137,39 +121,7 @@ const Nav = ({ active }) => {
           layout: { duration: 10 },
         }}
       >
-        {/* <motion.LayoutGroup layout transition={{ layout:{duration: 3} }}> */}
-        {/* <motion.a
-            variants={parent}
-            animate={activeNav === "#" ? "visible" : "hidden"}
-            href="#"
-            onClick={() => setActiveNav("#")}
-          >
-            <IoIosHome />
-          </motion.a>
-          <motion.a
-            variants={parent}
-            animate={activeNav === "#about" ? "visible" : "hidden"}
-            href="#about"
-            onClick={() => setActiveNav("#about")}
-          >
-            <AiOutlineUser />
-          </motion.a>
-          <motion.a
-            variants={parent}
-            animate={activeNav === "#contact" ? "visible" : "hidden"}
-            href="#contact"
-            onClick={() => setActiveNav("#contact")}
-          >
-            <IoMdContacts />
-          </motion.a>
-          <motion.a
-            variants={parent}
-            animate={activeNav === "#experience" ? "visible" : "hidden"}
-            href="#experience"
-            onClick={() => setActiveNav("#experience")}
-          >
-            <FaBook />
-          </motion.a> */}
+       
 
         {items.map((item) => (
           <motion.a
@@ -189,35 +141,13 @@ const Nav = ({ active }) => {
               position: "relative",
               color: active === item.Tagactive ? "var(--color-bg)" : "",
             }}
-            // onFocus={() => setFocused(item.Tagactive)}
-            // onMouseEnter={() => setFocused(item.Tagactive)}
+            
           >
             {item.tagIcon}
-            {/* {focused === item.Tagactive ? (
-              <motion.div
-                transition={{
-                  layout: {
-                    duration: .3,
-                    ease: "easeOut",
-                  },
-                }}
-                style={{
-                  position: "absolute",
-                  bottom: "0px",
-                  right: 0,
-                  width: "100%",
-                  height: "100%",
-                  opacity: '0.5',
-                  background: "rgb(0,0,0,0.5)",
-                  borderRadius: "50px",
-                  zIndex: 0,
-                }}
-                layoutId="highlight"
-              />
-            ) : null} */}
+          
             {active === item.Tagactive ? (
               <motion.div
-                // variants={parent}
+                
                 animate={{
                   boxShadow: [
                     "0px 0px 0px rgb(22,225,215)",
@@ -262,7 +192,6 @@ const Nav = ({ active }) => {
         <Link href="#services" to="/fa">
           <MdLanguage />
         </Link>
-        {/* </motion.LayoutGroup> */}
       </motion.nav>
     </>
   );
